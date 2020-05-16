@@ -87,7 +87,7 @@ public function uploadMulti($nesnename,$tablo='nan',$KID=1,$yuklenecekyer='image
 					//$yuklemekontrol=$fnk->DKontrol("../images/resimler/".$yukleme);
 					$sira=$this->IDGetir("resimler");
 					
-					$sql=$this->SorguCalistir("INSERT INTO resimler","SET tablo=?, TID=?, resim=?, durum=?, sira=?",array($tablo,$KID,$yukleme,1,$sira));
+					$sql=$this->SorguCalistir("INSERT INTO resimler","SET tablo=?, KID=?, resim=?, tarih=?",array($tablo,$KID,$yukleme,date("Y-m-d")));
 					
 					
 				}
